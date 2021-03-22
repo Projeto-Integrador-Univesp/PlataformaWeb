@@ -46,12 +46,14 @@ E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debu
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\WebPush.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
@@ -79,6 +81,7 @@ E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debu
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Scripts.cshtml.g.cs
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -89,4 +92,3 @@ E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debu
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Pi.PlataformaWeb.Enchente.dll
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Pi.PlataformaWeb.Enchente.pdb
 E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Pi.PlataformaWeb.Enchente.genruntimeconfig.cache
-E:\PI.PlataformaWeb\Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente\obj\Debug\netcoreapp3.1\Pi.PlataformaWeb.Enchente.csprojAssemblyReference.cache
