@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi.PlataformaWeb.Enchente", "Pi.PlataformaWeb.Enchente\Pi.PlataformaWeb.Enchente.csproj", "{B29F8108-C2DE-412A-9C68-A1CBD5779524}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3384F1DD-B047-4708-9AA1-3CFF69AF5504}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B29F8108-C2DE-412A-9C68-A1CBD5779524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29F8108-C2DE-412A-9C68-A1CBD5779524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29F8108-C2DE-412A-9C68-A1CBD5779524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29F8108-C2DE-412A-9C68-A1CBD5779524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3384F1DD-B047-4708-9AA1-3CFF69AF5504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3384F1DD-B047-4708-9AA1-3CFF69AF5504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3384F1DD-B047-4708-9AA1-3CFF69AF5504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3384F1DD-B047-4708-9AA1-3CFF69AF5504}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0C88D51-40A7-4165-B169-4B3AB8A3375F}
+	EndGlobalSection
+EndGlobal
