@@ -344,3 +344,5 @@ healthchecksdb
 
 /Pi.PlataformaWeb.Enchente/.vs/*
 /Pi.PlataformaWeb.Enchente/Pi.PlataformaWeb.Enchente/bin/*
+/Pi.PlataformaWeb.Enchente/Pi.PlataformaWeb.Enchente/Senhas.txt
+/Pi.PlataformaWeb.Enchente/Pi.PlataformaWeb.Enchente/appsettings.json

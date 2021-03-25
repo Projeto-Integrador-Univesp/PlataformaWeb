@@ -11,14 +11,15 @@ using System.Threading.Tasks;
 
 namespace Pi.PlataformaWeb.Enchente.Controllers
 {
-
-    public class HomeController : Controller
+    [ApiController]
+    [Route("api/[controller]/[action]")]
+    public class RecebeDadosController : ControllerBase
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IConfiguration _configuration;
         private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger, ApplicationDbContext context, IConfiguration configuration)
+        public RecebeDadosController(ILogger<HomeController> logger, ApplicationDbContext context, IConfiguration configuration)
         {
             _logger = logger;
             _context = context;
@@ -26,22 +27,9 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public virtual async Task<IActionResult> Index(int valor)
         {
-            ViewBag.PublicKey = _configuration.GetSection("VapidKeys")["PublicKey"];
-            return View();
-        }
-        [HttpGet]
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        [HttpGet]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return Ok("Ainda não tem nda não fiote");
         }
     }
 }

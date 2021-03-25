@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using Pi.PlataformaWeb.Enchente.Data;
 using System;
 using System.Collections.Generic;
@@ -30,10 +31,29 @@ namespace Pi.PlataformaWeb.Enchente
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
-            services.AddRazorPages();
+            services.AddControllers();
+            services.AddCors();
+
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "Projeto integrador",
+                    Version = "v1",
+                    Description = "Swagger - API",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Pi.Enchente",
+                        Email = "developer@Pi.Enchente.com",
+                        Url = new Uri("http://univesp.br")
+                    },
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +70,12 @@ namespace Pi.PlataformaWeb.Enchente
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "PI Enchentes");
+            });
+
+            app.UseCors();
             app.UseHttpsRedirection();
             
             app.UseStaticFiles();
@@ -64,7 +90,7 @@ namespace Pi.PlataformaWeb.Enchente
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
