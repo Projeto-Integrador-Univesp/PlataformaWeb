@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Pi.PlataformaWeb.Enchente.Data;
@@ -26,10 +27,11 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var dados = await _context.DadosVolumetricos.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
             ViewBag.PublicKey = _configuration.GetSection("VapidKeys")["PublicKey"];
-            return View();
+            return View(dados);
         }
         [HttpGet]
         public IActionResult Privacy()

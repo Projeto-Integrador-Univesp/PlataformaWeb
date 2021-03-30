@@ -27,8 +27,15 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
         }
 
         [HttpGet]
-        public virtual async Task<IActionResult> Index(int valor)
+        public virtual async Task<IActionResult> Index(Decimal valor)
         {
+            var model = new DadoVolumetrico();
+            model.DataCadastro = DateTime.Now;
+            model.Valor = valor;
+
+            _context.DadosVolumetricos.Add(model);
+            await _context.SaveChangesAsync();
+
             return Ok("Ainda não tem nda não fiote");
         }
     }

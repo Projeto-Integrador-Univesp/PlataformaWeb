@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Pi.PlataformaWeb.Enchente.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,5 +13,8 @@ namespace Pi.PlataformaWeb.Enchente.Data
             : base(options)
         {
         }
+
+
+        public DbSet<DadoVolumetrico> DadosVolumetricos { get; set; }
     }
 }

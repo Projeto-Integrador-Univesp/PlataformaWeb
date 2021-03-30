@@ -1,8 +1,30 @@
-﻿@{
+﻿@model IEnumerable<DadoVolumetrico>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p> <a href="https://github.com/Projeto-Integrador-Univesp/PlataformaWeb">https://github.com/Projeto-Integrador-Univesp/PlataformaWeb</a>.</p>
+</div>
+<div class="row">
+    <h3>Dados Volumétricos</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Dados</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Valor</td>
+                    <td>@item.DataCadastro</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

@@ -1,0 +1,2 @@
+﻿dotnet ef migrations add -c ApplicationDbContext migrationDadosVolumetricos
+dotnet ef database update
