@@ -34,7 +34,7 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
             return View(dados);
         }
         [HttpGet]
-        public IActionResult Privacy()
+        public IActionResult QuemSomos()
         {
             return View();
         }
