@@ -83,6 +83,7 @@ namespace Pi.PlataformaWeb.Enchente
 
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseRequestLocalization();
 
             app.UseEndpoints(endpoints =>
             {
