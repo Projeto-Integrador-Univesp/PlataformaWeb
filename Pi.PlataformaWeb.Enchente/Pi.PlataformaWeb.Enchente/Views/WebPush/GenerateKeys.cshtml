@@ -1,0 +1,20 @@
+﻿@model Inscrito
+@{
+    ViewData["Title"] = "Configure Keys";
+}
+<h2>Configure Keys</h2>
+<div class="alert alert-warning alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Developer Notes:</strong>
+    <ul>
+        <li>Web Push notification requer uma publica e privada chave para enviar.</li>
+
+    </ul>
+</div>
+<p>Configurações no appsettings.json</p>
+<pre>
+  "VapidKeys" : {
+    "PublicKey": "@ViewBag.PublicKey",
+    "PrivateKey":  "negativo...." 
+  } 
+</pre>

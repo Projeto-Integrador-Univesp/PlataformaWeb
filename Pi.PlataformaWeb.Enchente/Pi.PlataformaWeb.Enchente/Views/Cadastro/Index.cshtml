@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Inscrito>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Lista de inscritos</h2>
+
+<a asp-action="Create">Criar novo</a>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Celular)
+                </th>
+                <th class="hidden-xs">
+                    @Html.DisplayNameFor(model => model.PushEndpoint)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PushP256DH)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PushAuth)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Celular)
+                </td>
+                <td class="hidden-xs" style="max-width: 100px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
+                    @Html.DisplayFor(modelItem => item.PushEndpoint)
+                </td>
+                <td style="max-width: 100px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
+                    @Html.DisplayFor(modelItem => item.PushP256DH)
+                </td>
+                <td style="max-width: 100px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
+                    @Html.DisplayFor(modelItem => item.PushAuth)
+                </td>
+                <td>
+                    <a asp-controller="WebPush" asp-action="Send" asp-route-id="@item.InscritoID" class="btn btn-danger">Enviar Push</a> |
+                    <a asp-action="Delete" asp-route-id="@item.InscritoID">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,54 @@
+﻿@model Pi.PlataformaWeb.Enchente.Models.Inscrito
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastro</h1>
+</div>
+<div class="row">
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Nome" class="control-label"></label>
+            <input asp-for="Nome" class="form-control" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Celular" class="control-label"></label>
+            <input asp-for="Celular" class="form-control" />
+            <span asp-validation-for="Celular" class="text-danger"></span>
+        </div>
+        <div class="well">
+            <h4>Web Push Detalhes</h4>
+            <span style="font-size: 12px;">Abaixo apenas valores para desenvolvimento.</span>
+            <hr />
+            <div class="form-group">
+                <label asp-for="PushEndpoint" class="control-label"></label>
+                <input asp-for="PushEndpoint" class="form-control" readonly required />
+                <span asp-validation-for="PushEndpoint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PushP256DH" class="control-label"></label>
+                <input asp-for="PushP256DH" class="form-control" readonly required />
+                <span asp-validation-for="PushP256DH" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PushAuth" class="control-label"></label>
+                <input asp-for="PushAuth" class="form-control" readonly required />
+                <span asp-validation-for="PushAuth" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<script>
+    //Vapid public key.
+    var applicationServerPublicKey = '@ViewBag.PublicKey';
+</script>
+@section Scripts {
+    <script src="~/js/CreateDevice.js"></script>
+}
