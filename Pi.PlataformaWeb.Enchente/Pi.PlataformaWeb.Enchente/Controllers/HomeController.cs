@@ -39,6 +39,14 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
             return View();
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Stats()
+        {
+            var dados = await _context.DadosVolumetricos.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
+            return View(dados);
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [HttpGet]
         public IActionResult Error()
