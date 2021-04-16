@@ -27,6 +27,7 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
         }
 
         [HttpGet]
+        [Route("ColunaDagua")]
         public virtual async Task<IActionResult> Index(Decimal valor)
         {
             var model = new DadoVolumetrico();
@@ -36,7 +37,20 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
             _context.DadosVolumetricos.Add(model);
             await _context.SaveChangesAsync();
 
-            return Ok("Ainda não tem nda não fiote");
+            return Ok(model);
+        }
+
+        [HttpGet]
+        public virtual async Task<IActionResult> Enchente(bool enchente)
+        {
+            var model = new EnchenteData()
+            {
+                TeveEnchente = enchente,
+                DataCadastro = DateTime.Now
+            };
+            _context.Enchentes.Add(model);
+            await _context.SaveChangesAsync();
+            return Ok(model);
         }
     }
 }

@@ -1,34 +1,64 @@
-﻿@model IEnumerable<DadoVolumetrico>
+﻿@model Pi.PlataformaWeb.Enchente.ViewModel.HomeViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p> <a href="https://github.com/Projeto-Integrador-Univesp/PlataformaWeb">https://github.com/Projeto-Integrador-Univesp/PlataformaWeb</a>.</p>
+    <h1 class="display-4">Bem vindo ao nosso projeto</h1>
+    <p> <a href="https://github.com/Projeto-Integrador-Univesp/PlataformaWeb" target="_blank">https://github.com/Projeto-Integrador-Univesp/PlataformaWeb</a>.</p>
 </div>
 <div class="row">
-    <h3>Dados Volumétricos</h3>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Dados</th>
-                <th>Data</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+    
+    <div class="col-12 col-md-6">
+        <h3>Dados Volumétricos</h3>
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>@item.Valor</td>
-                    <td>@item.DataCadastro</td>
+                    <th>Dados</th>
+                    <th>Data</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-</div>
-<div style="text-align: center">
-    <a href="/Home/Stats">
-        <img src="~/img/chart.png" width="300" class="img-fluid" title="Ver gráficos"/><br /> Ver gráficos
-    </a>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.DadosVolumetricos)
+                {
+                    <tr>
+                        <td>@item.Valor</td>
+                        <td>@item.DataCadastro</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div style="text-align: center">
+            <a href="/Home/Stats">
+                <img src="~/img/chart.png" width="300" class="img-fluid" title="Ver gráficos" /><br /> Ver gráficos
+            </a>
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <h3>Enchente?</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Enchente?</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Enchentes)
+                {
+                    <tr>
+                        <td>@(item.TeveEnchente? "Sim":"Não")</td>
+                        <td>@item.DataCadastro</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+        <div style="text-align: center">
+           
+                <img src="~/img/chart.png" width="300" class="img-fluid" title="Ver gráficos" />
+            
+        </div>
+    </div>
+    
 </div>

@@ -17,5 +17,9 @@ namespace Pi.PlataformaWeb.Enchente.Data
 
         public DbSet<DadoVolumetrico> DadosVolumetricos { get; set; }
         public DbSet<Inscrito> Inscritos { get; set; }
+        public DbSet<EnchenteData> Enchentes { get; set; }
+
+
+        
     }
 }

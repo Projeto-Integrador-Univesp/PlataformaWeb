@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Pi.PlataformaWeb.Enchente.Data;
 using Pi.PlataformaWeb.Enchente.Models;
+using Pi.PlataformaWeb.Enchente.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -29,9 +30,12 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var dados = await _context.DadosVolumetricos.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
+            var model = new HomeViewModel();
+            model.DadosVolumetricos = await _context.DadosVolumetricos.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
+            model.Enchentes = await _context.Enchentes.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
+
             ViewBag.PublicKey = _configuration.GetSection("VapidKeys")["PublicKey"];
-            return View(dados);
+            return View(model);
         }
         [HttpGet]
         public IActionResult QuemSomos()

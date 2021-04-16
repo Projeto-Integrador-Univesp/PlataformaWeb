@@ -1,2 +1,2 @@
-﻿dotnet ef migrations add -c ApplicationDbContext migrationDadosVolumetricos
+﻿dotnet ef migrations add -c ApplicationDbContext migrationEnchenteData
 dotnet ef database update
