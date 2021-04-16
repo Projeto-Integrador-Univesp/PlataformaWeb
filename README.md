@@ -1,7 +1,7 @@
 # Bem vindo ao projeto PI
 
 ![](https://img.shields.io/badge/Linguagem-CSharp-orange.svg) 
-![](https://shields.io/badge/license-GPL%20%3E%3D%202-blue)
+![](https://shields.io/badge/license-GPL%20%3E%3D%203-blue)
 ![](https://img.shields.io/github/commit-activity/m/Projeto-Integrador-Univesp/PlataformaWeb)
 ![Swagger Validator](https://img.shields.io/swagger/valid/3.0?specUrl=https%3A%2F%2Fenchente.azurewebsites.net%2Fswagger%2Fv1%2Fswagger.json)
 
