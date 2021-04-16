@@ -5,8 +5,6 @@ using Microsoft.Extensions.Logging;
 using Pi.PlataformaWeb.Enchente.Data;
 using Pi.PlataformaWeb.Enchente.Models;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
