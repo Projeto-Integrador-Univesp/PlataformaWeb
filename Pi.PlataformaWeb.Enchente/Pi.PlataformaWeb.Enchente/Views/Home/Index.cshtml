@@ -23,7 +23,7 @@
                 {
                     <tr>
                         <td>@item.Valor</td>
-                        <td>@item.DataCadastro</td>
+                        <td>@item.DataCadastro.ToString("dd/MM hh:mm:ss")</td>
                     </tr>
                 }
             </tbody>
@@ -48,7 +48,7 @@
                 {
                     <tr>
                         <td>@(item.TeveEnchente? "Sim":"Não")</td>
-                        <td>@item.DataCadastro</td>
+                        <td>@item.DataCadastro.ToString("dd/MM hh:mm:ss")</td>
                     </tr>
                 }
 
