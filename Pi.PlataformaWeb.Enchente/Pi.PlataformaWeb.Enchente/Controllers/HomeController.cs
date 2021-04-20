@@ -29,8 +29,8 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
         public async Task<IActionResult> Index()
         {
             var model = new HomeViewModel();
-            model.DadosVolumetricos = await _context.DadosVolumetricos.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
-            model.Enchentes = await _context.Enchentes.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
+            model.DadosVolumetricos = await _context.DadosVolumetricos.OrderByDescending(o => o.DataCadastro).Take(50).ToListAsync();
+            model.Enchentes = await _context.Enchentes.OrderByDescending(o => o.DataCadastro).Take(50).ToListAsync();
 
             ViewBag.PublicKey = _configuration.GetSection("VapidKeys")["PublicKey"];
             return View(model);
@@ -45,6 +45,13 @@ namespace Pi.PlataformaWeb.Enchente.Controllers
         public async Task<IActionResult> Stats()
         {
             var dados = await _context.DadosVolumetricos.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
+            return View(dados);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Stats1()
+        {
+            var dados = await _context.Enchentes.OrderByDescending(o => o.DataCadastro).Take(100).ToListAsync();
             return View(dados);
         }
 

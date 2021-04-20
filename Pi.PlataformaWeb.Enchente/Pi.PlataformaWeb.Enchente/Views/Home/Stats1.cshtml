@@ -1,0 +1,38 @@
+﻿@model IEnumerable<EnchenteData>
+@{
+    var positivo = Model.Where(w => w.TeveEnchente).Count();
+    var negativo = Model.Where(w => !w.TeveEnchente).Count();
+
+}
+
+<h2>Teve enchentes?</h2>
+<div class="wrapper">
+    <canvas id="myChart" class="chart-container" style="position: relative; height:20vh; width:80vw" height="400"></canvas>
+</div>
+<script src="~/js/chart.min.js"></script>
+<script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        const data = {
+            labels: [
+                'Positivo',
+                'Negativo'
+            ],
+            datasets: [{
+                label: 'Teve enchente?',
+                data: [@positivo, @negativo],
+                backgroundColor: [
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 99, 132)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+
+
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data
+
+    });
+</script>
