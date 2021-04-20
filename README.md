@@ -1,3 +1,4 @@
+
 # Bem vindo ao projeto PI
 
 ![](https://img.shields.io/badge/Linguagem-CSharp-orange.svg) 
@@ -5,14 +6,22 @@
 ![](https://img.shields.io/github/commit-activity/m/Projeto-Integrador-Univesp/PlataformaWeb)
 ![Swagger Validator](https://img.shields.io/swagger/valid/3.0?specUrl=https%3A%2F%2Fenchente.azurewebsites.net%2Fswagger%2Fv1%2Fswagger.json)
 
-Objetivo do PI
+**Objetivo do PI**
 Desenvolver uma ferramenta para monitorar a coluna d'agua em rios para evitar extravase.
 Assim quando a coluna d'agua do rio chegar ao limite será avisado as autoridades (Defesa cívil, etc) e a população.
+Também está previsto um sistema de cadastro para a população que receberá as notificações via Push notification.
+
+
+
+**Acesse o site para testes:**
+https://enchente.azurewebsites.net/
+
 
 --------------
 ### Software em 2 camadas
 1. IoT [[clique aqui](https://github.com/Projeto-Integrador-Univesp/FirmwareIoT "clique aqui")]
-1. Web API
+2. Web API
+3. Wb App
 
 ------------
 
@@ -24,10 +33,17 @@ Desenvolvido com as tecnologias:
 - Docker compose
 - ECMASCRIPT  6
 
-
+##### Web App
+Desenvolvido com as tecnologias:
+- PWA
+- C# 8.3
+- Asp.net Core 3.1 LTS
+- Docker
+- Docker compose
+- ECMASCRIPT  6
 ------------
 
-Principais URL
+**Principais URL:**
 
 1.[ SWAGGER API](https://enchente.azurewebsites.net/swagger/index.html)
 2. [Home](https://enchente.azurewebsites.net/)
