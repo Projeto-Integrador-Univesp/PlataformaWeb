@@ -2,13 +2,21 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    .enchente {
+        color: #e91e63;
+    }
+    .sol {
+        color: #ff5722
+    }
+</style>
 
 <div class="text-center">
     <h1 class="display-4">Bem vindo ao nosso projeto</h1>
     <p> <a href="https://github.com/Projeto-Integrador-Univesp/PlataformaWeb" target="_blank">https://github.com/Projeto-Integrador-Univesp/PlataformaWeb</a>.</p>
 </div>
 <div class="row">
-    
+
     <div class="col-12 col-md-6">
         <h3>Dados Volumétricos</h3>
         <span>últimos 50 registros</span>
@@ -48,8 +56,21 @@
             <tbody>
                 @foreach (var item in Model.Enchentes)
                 {
+
+
                     <tr>
-                        <td>@(item.TeveEnchente? "Sim":"Não")</td>
+                        <td>
+                            @if (item.TeveEnchente)
+                            {
+                                
+                                <span class="enchente"><i class="fas fa-cloud-rain"></i> &nbsp; Sim</span>
+                            }
+                            else
+                            {
+                                <span class="sol"><i class="fas fa-sun"></i> Não</span>
+                            }
+
+                        </td>
                         <td>@item.DataCadastro.ToString("dd/MM hh:mm:ss")</td>
                     </tr>
                 }
@@ -63,5 +84,5 @@
 
         </div>
     </div>
-    
+
 </div>
